@@ -11,7 +11,7 @@ class Dread < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_darwin_amd64.tar.gz"
-      sha256 "ba3ac1f2008a40981160384e2cdd2de5ec0e55f6cd686dfa2ffbc1da3629ca48"
+      sha256 "df2f3d02d29033abdcc88960bd79498a0baa73f212665bdf9281817791141c13"
 
       define_method(:install) do
         bin.install "dread"
@@ -19,7 +19,7 @@ class Dread < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_darwin_arm64.tar.gz"
-      sha256 "3bdf6862deeba5a28ee0b03d5e457f789a5cee432bf4f02defc7ba0b81db379a"
+      sha256 "da4e9639210d84cc6b02ed05d4dd66784013f51fbb97d61d9341f2a5e33c9e19"
 
       define_method(:install) do
         bin.install "dread"
@@ -30,14 +30,14 @@ class Dread < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_linux_amd64.tar.gz"
-      sha256 "cf323025e12e8fdbafaa6f71bc8a33b65a20fd3a46674ae0245214a4f9420db8"
+      sha256 "b0887237e1d27cc8ff03c5c6771676a9517bd35408c0fb04bcac38c713771b42"
       define_method(:install) do
         bin.install "dread"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_linux_arm64.tar.gz"
-      sha256 "cd135750d928879e20c3d63ee463cbe6e71516e0a3b9989208a77227fc78edd6"
+      sha256 "e45564cb7d2053921c4785c40d4c69755b56af0c0b956a5ae5043b6c1e6f9ce2"
       define_method(:install) do
         bin.install "dread"
       end
