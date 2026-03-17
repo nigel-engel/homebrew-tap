@@ -5,21 +5,21 @@
 class Dread < Formula
   desc "Terminal webhook notifications"
   homepage "https://github.com/nigel-engel/dread.sh"
-  version "0.2.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.2.0/dread_darwin_amd64.tar.gz"
-      sha256 "225abd3e1103a11306da18c5c5823c3e2446910f50ff9608cf5938742f943314"
+      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_darwin_amd64.tar.gz"
+      sha256 "ba3ac1f2008a40981160384e2cdd2de5ec0e55f6cd686dfa2ffbc1da3629ca48"
 
       define_method(:install) do
         bin.install "dread"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.2.0/dread_darwin_arm64.tar.gz"
-      sha256 "4b06a9a468d11529ccb286fcc0bd797dda52f8507a755478c5d859cba3edbd43"
+      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_darwin_arm64.tar.gz"
+      sha256 "3bdf6862deeba5a28ee0b03d5e457f789a5cee432bf4f02defc7ba0b81db379a"
 
       define_method(:install) do
         bin.install "dread"
@@ -29,15 +29,15 @@ class Dread < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.2.0/dread_linux_amd64.tar.gz"
-      sha256 "2047330129970327eba8d3efbd877be3dac9f826e0ea492326d1ab93263a0f19"
+      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_linux_amd64.tar.gz"
+      sha256 "cf323025e12e8fdbafaa6f71bc8a33b65a20fd3a46674ae0245214a4f9420db8"
       define_method(:install) do
         bin.install "dread"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.2.0/dread_linux_arm64.tar.gz"
-      sha256 "f7283f0df72b4ae01b3d4b489265d2156d8f654cec1ec912e95bde0ce973b95d"
+      url "https://github.com/nigel-engel/dread.sh/releases/download/v0.4.0/dread_linux_arm64.tar.gz"
+      sha256 "cd135750d928879e20c3d63ee463cbe6e71516e0a3b9989208a77227fc78edd6"
       define_method(:install) do
         bin.install "dread"
       end
